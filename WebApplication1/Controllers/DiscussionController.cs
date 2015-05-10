@@ -121,9 +121,10 @@ namespace WebApplication1.Controllers
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
             Coment coment = await db.comments.FindAsync(id);
+            int post_id = coment.post.id;
             db.comments.Remove(coment);
             await db.SaveChangesAsync();
-            return RedirectToAction("Details", "Discussion");
+            return RedirectToAction("Index", "Discussion", new { id = post_id});
         }
 
         protected override void Dispose(bool disposing)

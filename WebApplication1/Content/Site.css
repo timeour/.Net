@@ -121,15 +121,16 @@ delete-comment-btn:hover {
     padding-left: 41.5%;
     padding-right: 44%;
     padding-bottom: 8px;
-    background-color: teal;
+    background-color: powderblue;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-    color: white;
+    color: teal;
     box-shadow: 0 6px 10px rgba(0,0,0,0.2);
 }
 
 .details-btn:hover {
     background-color: lightgray;
+    text-decoration: none;
     color: white;
     text-decoration: none;
 }
