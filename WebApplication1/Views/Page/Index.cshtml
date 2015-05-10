@@ -1,0 +1,25 @@
+﻿@model IEnumerable<WebApplication1.Models.Post>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="article">
+    @foreach (var item in Model)
+    {
+        <div class="part">
+            <div class="title-index">
+                @Html.DisplayFor(modelItem => item.name)
+            </div>
+            <div class="text-index">
+                @Html.DisplayFor(modelItem => item.text)              
+            </div>
+                            
+            <p>@Html.ActionLink("Редактировать", "Edit", new { id = item.id }, new { @class = "edit-article-btn" })</p>
+            <p>@Html.ActionLink("Удалить", "Delete", new { id = item.id }, new { @class = "delete-article-btn" })</p>
+            @Html.ActionLink("Просмотреть", "Details", new { id = item.id }, new { @class = "details-btn" })
+        </div>
+
+    }
+</div>  
+

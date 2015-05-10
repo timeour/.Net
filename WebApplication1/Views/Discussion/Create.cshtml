@@ -1,0 +1,33 @@
+﻿@model WebApplication1.Models.Coment
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="article">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="article-new">New article</div>
+        <div class="input-form">
+
+            @Html.ValidationSummary(true)
+
+            <div class="title-form">
+                @Html.LabelFor(model => model.text)
+                <p>@Html.EditorFor(model => model.text)</p>
+                <p>@Html.ValidationMessageFor(model => model.text)</p>
+            </div>
+
+            <div class="create-btn">
+                <input type="submit" value="Создать" class="btn btn-default" />
+            </div>
+        </div>
+    }
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</div>

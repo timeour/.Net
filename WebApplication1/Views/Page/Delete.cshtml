@@ -1,0 +1,23 @@
+﻿@model WebApplication1.Models.Post
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="article">
+    <div class="part">
+        <div class="article-delete">Delete</div>
+
+        <div class="article-confirm">Are you sure you want to delete this?</div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+    <div class="delete-btn">
+        <input type="submit" value="Delete" class="btn btn-default" />
+    </div>
+        }
+    </div>
+</div>
