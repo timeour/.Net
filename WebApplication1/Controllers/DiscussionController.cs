@@ -93,9 +93,9 @@ namespace WebApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(coment).State = EntityState.Modified;
+                db.Entry(coment).State = EntityState.Modified;                             
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Discussion");
             }
             return View(coment);
         }

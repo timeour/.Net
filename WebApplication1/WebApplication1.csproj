@@ -229,8 +229,6 @@
     <Content Include="Views\Discussion\Details.cshtml" />
     <Content Include="Views\Discussion\Edit.cshtml" />
     <Content Include="Views\Discussion\Index.cshtml" />
-    <Content Include="Views\Autorizated\Details.cshtml" />
-    <Content Include="Views\Autorizated\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

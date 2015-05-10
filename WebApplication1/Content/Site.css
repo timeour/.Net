@@ -345,3 +345,21 @@ delete-comment-btn:hover {
     color: white;
     text-decoration: none;
 }
+
+.edit-comment-btn {
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-bottom: 1px;
+    float: right;
+    margin-top: 6px;
+    margin-right: 9px;
+    color: teal;
+    text-decoration: none;
+}
+
+.edit-comment-btn:hover {
+    background-color: teal;
+    border-radius:25px;
+    color: white;
+    text-decoration: none;
+}

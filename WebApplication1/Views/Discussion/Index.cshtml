@@ -18,6 +18,7 @@
                 <div class="comments-part">
                     @if (item.author.UserName == User.Identity.Name.ToString()) {
                         @Html.ActionLink("x", "Delete", new { id = item.id }, new { @class = "delete-comment-btn" }) 
+                        @Html.ActionLink("edit", "Edit", new { id = item.id }, new { @class = "edit-comment-btn" })                    
                     }                   
                     <div class="comment-autor">
                         @Html.DisplayFor(modelItem => item.author.UserName)
