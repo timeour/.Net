@@ -16,7 +16,9 @@
             @foreach (var item in Model)
             {   
                 <div class="comments-part">
-                    @Html.ActionLink("x", "Delete", new { id = item.id }, new { @class = "delete-comment-btn" })
+                    @if (item.author.UserName == User.Identity.Name.ToString()) {
+                        @Html.ActionLink("x", "Delete", new { id = item.id }, new { @class = "delete-comment-btn" }) 
+                    }                   
                     <div class="comment-autor">
                         @Html.DisplayFor(modelItem => item.author.UserName)
                     </div>

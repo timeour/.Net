@@ -14,10 +14,15 @@
             <div class="text-index">
                 @Html.DisplayFor(modelItem => item.text)              
             </div>
-                            
-            <p>@Html.ActionLink("Редактировать", "Edit", new { id = item.id }, new { @class = "edit-article-btn" })</p>
-            <p>@Html.ActionLink("Удалить", "Delete", new { id = item.id }, new { @class = "delete-article-btn" })</p>
-            @Html.ActionLink("Просмотреть", "Details", new { id = item.id }, new { @class = "details-btn" })
+             @if (item.author.UserName !=  User.Identity.Name.ToString()) {
+                 @Html.ActionLink("Просмотреть", "Details", new { id = item.id }, new { @class = "details-btn" }) 
+             }
+             else
+             {
+                <p>@Html.ActionLink("Редактировать", "Edit", new { id = item.id }, new { @class = "edit-article-btn" })</p>
+                <p>@Html.ActionLink("Удалить", "Delete", new { id = item.id }, new { @class = "delete-article-btn" })</p>
+                 @Html.ActionLink("Просмотреть", "Details", new { id = item.id }, new { @class = "details-btn" }) 
+             }                                     
         </div>
 
     }

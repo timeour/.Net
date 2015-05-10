@@ -49,7 +49,7 @@ namespace WebApplication1.Controllers
                 if (user != null)
                 {
                     await SignInAsync(user, model.RememberMe);
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Index", "Page");
                 }
                 else
                 {
@@ -83,7 +83,7 @@ namespace WebApplication1.Controllers
                 if (result.Succeeded)
                 {
                     await SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Index", "Autorizated");
+                    return RedirectToAction("Index", "Page");
                 }
                 else
                 {
@@ -290,7 +290,7 @@ namespace WebApplication1.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut();
-            return RedirectToAction("Index", "Guest");
+            return RedirectToAction("Login");
         }
 
         //

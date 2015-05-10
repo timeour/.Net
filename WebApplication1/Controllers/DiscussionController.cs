@@ -123,7 +123,7 @@ namespace WebApplication1.Controllers
             Coment coment = await db.comments.FindAsync(id);
             db.comments.Remove(coment);
             await db.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", "Discussion");
         }
 
         protected override void Dispose(bool disposing)

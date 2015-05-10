@@ -84,7 +84,8 @@ input[type="checkbox"].input-validation-error {
     margin-bottom: 10px;
     font-size: 2.5em;
     color: dimgray;
-    background-color: white;
+    background-color: teal;
+    color: white;
 }
 
 .text-index {
@@ -219,7 +220,7 @@ delete-comment-btn:hover {
     padding-left: 44%;
     padding-right: 47%;
     padding-bottom: 8px;
-    background-color: firebrick;
+    background-color: indianred;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     color: white;
@@ -242,7 +243,7 @@ delete-comment-btn:hover {
     padding-left: 42%;
     padding-right: 41.5%;
     padding-bottom: 8px;
-    background-color: lightgray;
+    background-color: gray;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     color: white;
