@@ -15,26 +15,28 @@
 
             @Html.ValidationSummary(true)
 
-            <div class="title-form">
-                @Html.LabelFor(model => model.name)
-                <p>@Html.EditorFor(model => model.name)</p>
-                <p>@Html.ValidationMessageFor(model => model.name)</p>
-            </div>
+            <div class="table-input">
+                <div class="title-form">
+                    @Html.LabelFor(model => model.name)
+                    <p>@Html.EditorFor(model => model.name)</p>
+                    <p>@Html.ValidationMessageFor(model => model.name)</p>
+                </div>
 
-            <div class="text-form">
-                @Html.LabelFor(model => model.description)
-                <p>@Html.EditorFor(model => model.description)</p>
-                <p>@Html.ValidationMessageFor(model => model.description)</p>
-            </div>
+                <div class="text-form">
+                    @Html.LabelFor(model => model.description)
+                    <p>@Html.EditorFor(model => model.description)</p>
+                    <p>@Html.ValidationMessageFor(model => model.description)</p>
+                </div>
 
-            <div class="text-form">
-                @Html.LabelFor(model => model.text)
-                <p>@Html.EditorFor(model => model.text)</p>
-                <p>@Html.ValidationMessageFor(model => model.text)</p>
-            </div>
+                <div class="text-form">
+                    @Html.LabelFor(model => model.text)
+                    <p>@Html.EditorFor(model => model.text)</p>
+                    <p>@Html.ValidationMessageFor(model => model.text)</p>
+                </div>
 
-            <div class="create-btn">
-                <input type="submit" value="Создать" class="btn btn-default" />
+                <div class="create-btn">
+                    <input type="submit" value="Создать" class="btn btn-default" />
+                </div>
             </div>
         </div>
     }

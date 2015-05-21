@@ -10,14 +10,14 @@
     {
         @Html.AntiForgeryToken()
 
-        <div class="article-new">New article</div>
+        <div class="article-new">Новый комментарий</div>
         <div class="input-form">
 
             @Html.ValidationSummary(true)
 
             <div class="title-form">
                 @Html.LabelFor(model => model.text)
-                <p>@Html.EditorFor(model => model.text)</p>
+                <p>@Html.EditorFor(model => model.text, new { @class = "input-label-text" })</p>
                 <p>@Html.ValidationMessageFor(model => model.text)</p>
             </div>
 

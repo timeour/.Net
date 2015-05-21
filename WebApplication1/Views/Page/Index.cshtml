@@ -19,12 +19,42 @@
              }
              else
              {
-                <p>@Html.ActionLink("Редактировать", "Edit", new { id = item.id }, new { @class = "edit-article-btn" })</p>
-                <p>@Html.ActionLink("Удалить", "Delete", new { id = item.id }, new { @class = "delete-article-btn" })</p>
-                 @Html.ActionLink("Просмотреть", "Details", new { id = item.id }, new { @class = "details-btn" }) 
+                 <a href="javascript:" class="Edit">
+                     Развернуть
+                 </a>
+                 <ul class="post-edit">
+                     <li>
+                         @Html.ActionLink("Редактировать", "Edit", new { id = item.id }, new { @class = "edit-article-btn" })      
+                     </li>
+                     <li>
+                         @Html.ActionLink("Удалить", "Delete", new { id = item.id }, new { @class = "delete-article-btn" })
+                     </li>
+                     <li>
+                         @Html.ActionLink("Просмотреть", "Details", new { id = item.id }, new { @class = "details-btn" })
+                     </li>
+                 </ul>
              }                                     
         </div>
 
     }
 </div>  
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    var button = $('.Edit');
+
+    $(button).on('click', function () {
+        var list = $(this).siblings('.post-edit')
+        var size = $(list).find('li').size();
+        var lineHeight = $(list).children('li').outerHeight();
+
+        if (this.push) {
+            $(list).height(lineHeight * size);
+            $(this).text('Свернуть');
+        } else {
+            $(this).text('Развернуть')
+            $(list).height(0);
+        }
+        this.push = !this.push;
+    }); 
+</script>
 
